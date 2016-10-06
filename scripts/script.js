@@ -79,7 +79,9 @@ $(document).ready(function(){
     }
   });
 
-if ($(window).width() < 573){  
+
+function resize() {
+  if ($(window).width() < 573){  
     var topOfOthDiv = $("#about").offset().top;
     $(window).scroll(function() {
         if($(window).scrollTop() > topOfOthDiv) { //scrolled past the other div?
@@ -95,4 +97,9 @@ if ($(window).width() < 573){
 
     });
   } 
-}); 
+}
+$(window).resize(function() {
+  resize();
+})
+resize();
+});
