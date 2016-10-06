@@ -99,13 +99,24 @@ header {
 }
 
 .header-carousel .carousel-cell {
-	background-image: url('../assets/hero_img.jpg'); 
 	background-size: cover;
 	background-position: center;
 	width: 100%;
 	height: 70vh;
 	min-height: 500px;
 	max-height: 1500px;
+}
+
+.header-carousel #cell1 {
+	background-image: url('../assets/hero_img.jpg'); 
+}
+
+.header-carousel #cell2 {
+	background-image: url('../assets/hero-bg2.jpg'); 
+}
+
+.header-carousel #cell3 {
+	background-image: url('../assets/hero-bg3.jpg'); 
 }
 
 .header-carousel .flickity-page-dots {
@@ -141,11 +152,17 @@ header {
 
 .top-nav ul li:last-of-type {
 	float: right;
-	opacity: 0.5;
 }
 
 .toggle {
 	color: white;
+	padding: 10px;
+	transition: 0.3s all ease;
+	opacity: 0.5;
+
+	&:hover {
+		opacity: 0.75;
+	}
 }
 
 header h1 {
@@ -237,7 +254,6 @@ nav {
 		color: $grey;
 		font-family: $lato;
 		text-transform: uppercase;
-		font-size: 0.5rem;
 		font-weight: 900;
 		letter-spacing: 0.1rem;
 		margin-right: 2%;
@@ -290,12 +306,10 @@ nav {
 
 .top-nav2 ul li:first-of-type {
 	float: left;
-	margin-left: 5%;
 }
 
 .top-nav2 ul li:last-of-type {
 	float: right;
-	margin-right: 5%;
 }
 
 
@@ -322,12 +336,13 @@ nav {
 	.header-text {
 		margin-top: 50px;
 	}
-
-	.top-nav2 {
-		display: initial;
-	}
 }
 
+@media (max-width: 380px) {
+	.header-text button {
+		margin: 2%;
+	}
+}
 
 
 //<---------- SIDE MENU ---------->//
@@ -341,7 +356,7 @@ nav {
 	min-height: 550px;
 	background: transparentize($darkblue, 0.3);
 	position: absolute;
-	right: -50%;
+	right: -80%;
 	top: 0;
 	transition: 0.75s all ease;
 }
@@ -396,7 +411,6 @@ nav {
 	color: white;
 	font-family: $lato;
 	text-transform: uppercase;
-	font-size: 0.5rem;
 	font-weight: 900;
 	letter-spacing: 1px;
 }
@@ -416,6 +430,11 @@ input[type="checkbox"] {
 	left: 10%;
 	top: 10px;
 	padding: 10px;
+	transition: 0.3s all ease;
+
+	&:hover {
+		opacity: 0.75;
+	}
 }
 
 @media (max-width: 573px) {
@@ -900,6 +919,16 @@ section.team {
 	width: 80px;
 }
 
+@media (max-width: 380px) {
+	.stat {
+		min-width: 0px;
+
+		img {
+			width: 60px;
+		}
+	}
+}
+
 
 
 //<---------- PRICING ---------->//
@@ -940,6 +969,9 @@ section.team {
 }
 
 .pricing-features {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background: #F9FAFC;
 	height: 18rem;
 	box-shadow: 0 0 5px $grey;
@@ -952,14 +984,18 @@ section.team {
 		font-weight: 900;
 		color: $greyh;
 	}
-	& ul {
-		padding-top: 2.5rem;
-	}
 
 	& li {
-		padding: 5px 0 5px 0;
+		padding: 10px 0;
 		letter-spacing: 0.5px;
 	}
+}
+
+.pricing-button {
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .pricing-button button {
@@ -972,7 +1008,6 @@ section.team {
 	font-weight: 900;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	margin-top: 2.5rem;
 	transition: 0.3s all ease;
 	font-size: 1.5rem;
 
@@ -1008,13 +1043,13 @@ section.team {
 	.pricing-features {
 		height: 150px;
 
-		ul {
-			padding-top: 20px;
-		}
+	}
+
+	.pricing-button {
+		height: 60px;
 	}
 
 	.pricing-button button {
-		margin-top: 12px;
 		height: 35px;
 		width: 150px;
 	}
@@ -1059,7 +1094,10 @@ section.team {
 }
 
 .blog-content {
+	display: flex;
 	height: 100px;
+	justify-content: center;
+	align-items: center;
 	border-bottom: 1px solid $grey;
 	padding: 10px 5%;
 	overflow: hidden;
@@ -1075,15 +1113,17 @@ section.team {
 		letter-spacing: 0.5px;
 		font-size: 1.2rem;
 		line-height: 2;
-		margin-top: 2%;
+		padding-top: 2%;
 	}
 }
 
 .blog-comments {
-	height: 30px;
+	height: 50px;
 	padding: 5px 20px;
 	width: 100%;
-	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .flex-blog {
@@ -1264,6 +1304,12 @@ section.team {
 	}
 }
 
+@media (max-width: 380px) {
+	.input-small {
+		flex: 0 0 100%;
+	}
+}
+
 
 
 //<---------- QUOTE ---------->//
@@ -1272,6 +1318,7 @@ section.team {
 
 .quote .container {
 	display: flex;
+	height: 100%;
 }
 
 .quote {
@@ -1296,7 +1343,7 @@ section.team {
 }
 
 .quote button {
-	flex: 0 0 250px;
+	width:  250px;
 	height: 45px;
 	background-color: transparent;
 	color: white;
@@ -1314,18 +1361,26 @@ section.team {
 }
 
 @media (max-width: 630px) {
+	.quote .container {
+		justify-content: center;
+		align-items: center;
+	}
+
 	.quote {
 		height: 150px;
 		padding: 0px;
+		flex: 1 1 auto;	
 
 		h3 {
 			display: none;
 		}
 
 		button {
-			margin: 50px auto;
+			
 		}
 	}
+
+	
 }
 
 
@@ -1454,6 +1509,8 @@ footer .container {
 
 	footer {
 		height: 150px;
+		display: flex;
+		align-items: center;
 	}
 
 	.footer-about, .footer-recent-posts {
@@ -1462,6 +1519,5 @@ footer .container {
 
 	.footer-social {
 		text-align: center;
-		margin-top: -20px;
 	}
 }

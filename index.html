@@ -11,19 +11,23 @@
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="styles/jquery.fancybox.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="styles/style.css">
+	<link rel="icon" href="assets/favicon2.png">
 </head>
 <body>
+	<div class="overflow">
 	<header id="home">
-	<!-- <div class="top-nav2">
-		<ul>
-			<li class="logo"><img src="assets/logo.png" alt=""></li>
-			<li><label for="toggle" class="toggle">☰</label></li>
-		</ul>
-	</div> -->
+	<div class="top-nav2">
+		<div class="container">
+			<ul>
+				<li class="logo"><img src="assets/logo.png" alt=""></li>
+				<li><label for="toggle" class="toggle">☰</label></li>
+			</ul>
+		</div>
+	</div>
 		<div class="header-carousel" data-flickity='{"autoPlay": 5000, "selectedAttraction": 0.01, "wrapAround": true, "pauseAutoPlayOnHover": false}'>
-			<div class="carousel-cell"></div>
-		 	<div class="carousel-cell"></div>
-		 	<div class="carousel-cell"></div>
+			<div class="carousel-cell" id="cell1"></div>
+		 	<div class="carousel-cell" id="cell2"></div>
+		 	<div class="carousel-cell" id="cell3"></div>
 		</div>
 		<input type="checkbox" id="toggle" name="toggle">
 		<div class="container">
@@ -44,7 +48,7 @@
 			<label for="toggle" class="toggle sidebar-toggle"><i class="fa  fa-arrow-circle-o-right"></i></label>
 			<div class="side-menu">
 				<div class="side-menu-person">
-					<img src="assets/person_05.jpg" alt="">
+					<img src="assets/person_05.jpg" alt="Portrait of person who is online">
 					<div class="circle"></div>
 				</div>
 				<ul>
@@ -76,7 +80,6 @@
 	</nav>
 	<section class="intro" id="about">
 		<div class="container">
-
 			<div class="intro-quote">
 				<img src="assets/person_03.jpg" alt="">
 				<h2>"We are a close family of talented and driven people that strive to deliver quality and honesty."</h2>
@@ -187,22 +190,22 @@
 		<div class="container">
 			<div id="owl-sponsor" class="owl-carousel owl-theme">
 			    <div class="item">
-			    	<img src="assets/1.png" alt="">
-			    	<img src="assets/2.png" alt="">
-			    	<img src="assets/3.png" alt="">
-			    	<img src="assets/4.png" alt="">
+			    	<img src="assets/1.png" alt="Sponsor 1">
+			    	<img src="assets/2.png" alt="Sponsor 2">
+			    	<img src="assets/3.png" alt="Sponsor 3">
+			    	<img src="assets/4.png" alt="Sponsor 4">
 			    </div>
 			    <div class="item">
-			    	<img src="assets/1.png" alt="">
-			    	<img src="assets/2.png" alt="">
-			    	<img src="assets/3.png" alt="">
-			    	<img src="assets/4.png" alt="">
+			    	<img src="assets/1.png" alt="Sponsor 1">
+			    	<img src="assets/2.png" alt="Sponsor 2">
+			    	<img src="assets/3.png" alt="Sponsor 3">
+			    	<img src="assets/4.png" alt="Sponsor 4">
 			    </div>
 			    <div class="item">
-					<img src="assets/1.png" alt="">
-					<img src="assets/2.png" alt="">
-					<img src="assets/3.png" alt="">
-					<img src="assets/4.png" alt="">
+					<img src="assets/1.png" alt="Sponsor 1">
+					<img src="assets/2.png" alt="Sponsor 2">
+					<img src="assets/3.png" alt="Sponsor 3">
+					<img src="assets/4.png" alt="Sponsor 4">
 			    </div>
 			</div>
 		</div>
@@ -377,8 +380,10 @@
 						<div class="blog-photo">
 						</div>
 						<div class="blog-content">
-							<h3>It will make you wow!</h3>
-							<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+							<div class="blog-content-flex">
+								<h3>It will make you wow!</h3>
+								<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+							</div>
 						</div>
 						<div class="blog-comments">
 							<div class="comments">
@@ -391,11 +396,12 @@
 					</div>
 					<div class="blog-post post2">
 						<div class="blog-photo">
-							
 						</div>
 						<div class="blog-content">
-							<h3>It will make you wow!</h3>
-							<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+							<div class="blog-content-flex">
+								<h3>It will make you wow!</h3>
+								<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+							</div>
 						</div>
 						<div class="blog-comments">
 							<div class="comments">
@@ -411,8 +417,10 @@
 							
 						</div>
 						<div class="blog-content">
-							<h3>It will make you wow!</h3>
-							<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+							<div class="blog-content-flex">
+								<h3>It will make you wow!</h3>
+								<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+							</div>
 						</div>
 						<div class="blog-comments">
 							<div class="comments">
@@ -429,8 +437,10 @@
 						<div class="blog-photo">
 						</div>
 						<div class="blog-content">
-							<h3>It will make you wow!</h3>
-							<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+							<div class="blog-content-flex">
+								<h3>It will make you wow!</h3>
+								<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+							</div>
 						</div>
 						<div class="blog-comments">
 							<div class="comments">
@@ -443,11 +453,12 @@
 					</div>
 					<div class="blog-post post2">
 						<div class="blog-photo">
-							
 						</div>
 						<div class="blog-content">
-							<h3>It will make you wow!</h3>
-							<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+							<div class="blog-content-flex">
+								<h3>It will make you wow!</h3>
+								<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+							</div>
 						</div>
 						<div class="blog-comments">
 							<div class="comments">
@@ -460,11 +471,12 @@
 					</div>
 					<div class="blog-post post3">
 						<div class="blog-photo">
-							
 						</div>
 						<div class="blog-content">
-							<h3>It will make you wow!</h3>
-							<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+							<div class="blog-content-flex">
+								<h3>It will make you wow!</h3>
+								<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+							</div>
 						</div>
 						<div class="blog-comments">
 							<div class="comments">
@@ -481,8 +493,10 @@
 						<div class="blog-photo">
 						</div>
 						<div class="blog-content">
-							<h3>It will make you wow!</h3>
-							<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+							<div class="blog-content-flex">
+								<h3>It will make you wow!</h3>
+								<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+							</div>
 						</div>
 						<div class="blog-comments">
 							<div class="comments">
@@ -495,11 +509,12 @@
 					</div>
 					<div class="blog-post post2">
 						<div class="blog-photo">
-							
 						</div>
 						<div class="blog-content">
-							<h3>It will make you wow!</h3>
-							<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+							<div class="blog-content-flex">
+								<h3>It will make you wow!</h3>
+								<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+							</div>
 						</div>
 						<div class="blog-comments">
 							<div class="comments">
@@ -512,11 +527,12 @@
 					</div>
 					<div class="blog-post post3">
 						<div class="blog-photo">
-							
 						</div>
 						<div class="blog-content">
-							<h3>It will make you wow!</h3>
-							<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+							<div class="blog-content-flex">
+								<h3>It will make you wow!</h3>
+								<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+							</div>
 						</div>
 						<div class="blog-comments">
 							<div class="comments">
@@ -559,7 +575,7 @@
 	<section class="quote">
 		<div class="container">
 			<h3><i class="fa fa-align-left" aria-hidden="true"></i>Fill in our quote form</h3>
-			<button>Request Quote</button>
+			<a href="#contact"><button>Request Quote</button></a>
 		</div>
 	</section>
 	<footer>
@@ -568,7 +584,7 @@
 				<h3>About</h3>
 				<p>We are tristique, dolor sit amet tincidunt mattis, leo nisi tincidunt felis, at posuere.</p>
 				<p>35 Barnard St.<br>Savannah, GA<br>31401</p>
-				<p class="footer-red">T: +61 887 46 64 23<br>E: hello@cahara.com</p>
+				<p class="footer-red">T: +61 887 46 64 23<br><a href="mailto:hello@cahara.com">E: hello@cahara.com</a></p>
 			</div>
 			<div class="footer-section footer-recent-posts">
 				<h3>Recent Posts</h3>
@@ -583,22 +599,22 @@
 				<h3>We are Social</h3>
 				<ul>
 					<div class="footer-social-icon footer-facebook">
-						<li><i class="fa fa-facebook"></i></li>
+						<a href="http://facebook.com" target="_blank"><li><i class="fa fa-facebook"></i></li></a>
 					</div>
 					<div class="footer-social-icon footer-twitter">
-						<li><i class="fa fa-twitter"></i></li>
+						<a href="http://twitter.com" target="_blank"> <li><i class="fa fa-twitter"></i></li></a>
 					</div>
 					<div class="footer-social-icon footer-vimeo">
-						<li><i class="fa fa-vimeo"></i></li>
+						<a href="http://vimeo.com" target="_blank"> <li><i class="fa fa-vimeo"></i></li></a>
 					</div>
 					<div class="footer-social-icon footer-flickr">
-						<li><i class="fa fa-flickr"></i></li>
+						<a href="http://flickr.com" target="_blank"> <li><i class="fa fa-flickr"></i></li></a>
 					</div>
 					<div class="footer-social-icon footer-pinterest">
-						<li><i class="fa fa-pinterest"></i></li>
+						<a href="http://pinterest.com" target="_blank"> <li><i class="fa fa-pinterest"></i></li></a>
 					</div>
 					<div class="footer-social-icon footer-dribbble">
-						<li><i class="fa fa-dribbble"></i></li>
+						<a href="http://dribbble.com" target="_blank"> <li><i class="fa fa-dribbble"></i></li></a>
 					</div>
 				</ul>
 			</div>
@@ -609,5 +625,6 @@
 	<script src="owl-carousel/owl.carousel.js"></script>
 	<script src="scripts/script.js"></script>
 	<script type="text/javascript" src="scripts/jquery.fancybox.pack.js"></script>
+</div>
 </body>
 </html>

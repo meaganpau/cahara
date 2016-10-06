@@ -79,4 +79,20 @@ $(document).ready(function(){
     }
   });
 
+if ($(window).width() < 573){  
+    var topOfOthDiv = $("#about").offset().top;
+    $(window).scroll(function() {
+        if($(window).scrollTop() > topOfOthDiv) { //scrolled past the other div?
+            $(".top-nav2").fadeIn(200); //reached the desired point -- show div
+        }
+
+    });
+
+    $(window).scroll(function() {
+        if($(window).scrollTop() < topOfOthDiv) { //scrolled past the other div?
+            $(".top-nav2").fadeOut(200); //reached the desired point -- show div
+        }
+
+    });
+  } 
 }); 
