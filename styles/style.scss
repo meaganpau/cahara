@@ -1,6 +1,12 @@
 @import 'setup';
 @import 'variables';
 
+
+
+//<---------- RESETS ---------->//
+
+
+
 html {
 	font-size: 62.5%;
 }
@@ -10,6 +16,74 @@ body {
 	margin: 0 auto;
 	overflow-x: hidden;
 }
+
+h1, h2, h3, h4, p {
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	font-family: 'Georgia';
+	font-style: italic;
+	font-weight: lighter;
+	font-size: 2.5rem;
+	letter-spacing: 1px;
+	line-height: 1.5;
+	margin: 20px 0;
+}
+
+h3 {
+	font-size: 1.5rem;
+	font-weight: 900;
+	letter-spacing: 1px;
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	color: inherit;
+}
+
+hr {
+	width: 100px;
+	border: 1px solid $red;
+	margin-bottom: 50px;
+}
+
+section {
+	padding: 50px 0; 
+	position: relative;
+	z-index: -5;
+}
+
+nav ul, .top-nav ul, .side-menu ul, .team ul, .pricing-features ul, .footer-social ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.title {
+	text-align: center;
+	color: $greyh;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	font-weight: 900;
+	letter-spacing: 1px;
+	margin-bottom: 50px;
+}
+
+.container { 
+	width: 70%;
+	margin: 0 auto;
+	font-family: $lato;
+}
+
+
+
+//<---------- HEADER ---------->//
+
+
 
 header {
 	width: 100%;
@@ -49,62 +123,9 @@ header {
 	height: 7px;
 }
 
-h1, h2, h3, h4, p {
-	margin: 0;
-	padding: 0;
-}
-
-h2 {
-	font-family: 'Georgia';
-	font-style: italic;
-	font-weight: lighter;
-	font-size: 2.5rem;
-	letter-spacing: 1px;
-	line-height: 1.5;
-	margin: 20px 0;
-}
-
-h3 {
-	font-size: 1.5rem;
-	font-weight: 900;
-	letter-spacing: 1px;
-}
-
-a {
-	color: inherit;
-}
-
-.title {
-	text-align: center;
-	color: $greyh;
-	text-transform: uppercase;
-	font-size: 1.5rem;
-	font-weight: 900;
-	letter-spacing: 1px;
-	margin-bottom: 50px;
-}
-
-.container { 
-	width: 70%;
-	margin: 0 auto;
-	font-family: $lato;
-}
-
-@media (max-width: 900px) {
-	.container {
-		width: 90%;
-	}
-}
-
 .top-nav {
 	height: 100px;
 	line-height: 100px;
-}
-
-nav ul, .top-nav ul, .side-menu ul, .team ul, .pricing-features ul, .footer-social ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
 }
 
 .top-nav ul {
@@ -221,14 +242,8 @@ nav {
 		font-size: 0.5rem;
 		font-weight: 900;
 		letter-spacing: 0.1rem;
-	}
-
-	& li {
-		display: inline-block;
 		margin-right: 2%;
 		margin-left: 2%;
-		opacity: 0.5;
-		transition: 0.3s all ease;
 
 		&:last-of-type {
 			margin-right: 0;
@@ -237,6 +252,12 @@ nav {
 		&:first-of-type {
 			margin-left: 0;
 		}
+	}
+
+	& li {
+		display: inline-block;
+		opacity: 0.5;
+		transition: 0.3s all ease;
 
 		&:hover {
 			opacity: 1;
@@ -244,15 +265,76 @@ nav {
 	}
 }
 
-a {
-	margin: 0;
-	padding: 0;
-	text-decoration: none;
-}
-
 .logo img {
 	height: 25px;
 }
+
+.top-nav2 {
+	height: 80px;
+	line-height: 45px;
+	position: fixed;
+	background: $greyh;
+	width: 100%;
+	display: none;
+	opacity: 0.75;
+}
+
+.top-nav2 ul {
+	padding: 0;
+	list-style: none;
+	font-size: 2rem;
+	z-index: -1;
+}
+
+.top-nav2 ul li, .logo img {
+	vertical-align: middle;
+}
+
+.top-nav2 ul li:first-of-type {
+	float: left;
+	margin-left: 5%;
+}
+
+.top-nav2 ul li:last-of-type {
+	float: right;
+	margin-right: 5%;
+}
+
+
+
+@media (max-width: 900px) {
+	.container {
+		width: 90%;
+	}
+}
+
+@media (max-width: 573px) {
+	nav {
+		height: 0px;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	nav .logo img {
+		display: none;
+	}
+
+	.header-text {
+		margin-top: 50px;
+	}
+
+	.top-nav2 {
+		display: initial;
+	}
+}
+
+
+
+//<---------- SIDE MENU ---------->//
+
+
 
 .side {
 	width: 22%;
@@ -330,36 +412,27 @@ input[type="checkbox"] {
 }
 
 .sidebar-toggle {
-	font-size: 1.5rem;
+	font-size: 2.5rem;
 	opacity: 0.5;
 	position: absolute;
-	right: 10%;
-	top: 20px;
+	left: 10%;
+	top: 10px;
+	padding: 10px;
 }
 
 @media (max-width: 573px) {
-	nav {
-		height: 0px;
-	}
-
-	.menu {
-		display: none;
-	}
-
-	nav.logo {
-		display: none;
-	}
-
 	.side {
 		height: 100vh;
 		z-index: 10;
 		position: fixed;
 	}	
-
-	.header-text {
-		margin-top: 50px;
-	}
 }
+
+
+
+//<---------- ABOUT ---------->//
+
+
 
 .circle {
 	width: 10px;
@@ -371,17 +444,6 @@ input[type="checkbox"] {
 	position: absolute;
 	top: 0;
 	right: 25px;
-}
-
-hr {
-	width: 100px;
-	border: 1px solid $red;
-	margin-bottom: 50px;
-}
-
-section {
-	padding: 50px 0; 
-	position: relative;
 }
 
 .intro-quote {
@@ -451,6 +513,12 @@ section {
 		text-align: center;
 	}
 }
+
+
+
+//<---------- TEAM ---------->//
+
+
 
 section.team {
 	background: $grey;
@@ -557,6 +625,12 @@ section.team {
 	}
 }
 
+
+
+//<---------- TESTIMONIAL ---------->//
+
+
+
 .testimonial {
 	background-image: url('../assets/testimonial-bg.png');
 	background-size: cover;
@@ -572,6 +646,12 @@ section.team {
 		font-size: 1.2rem;
 	}
 }
+
+
+
+//<---------- SPONSORS ---------->//
+
+
 
 .sponsors {
 	text-align: center;
@@ -611,6 +691,18 @@ section.team {
 	background: $grey;
 }
 
+@media (max-width: 573px) {
+	#owl-sponsor .item img {
+		width: 30%;
+	}
+}
+
+
+
+//<---------- WORK ---------->//
+
+
+
 .work {
 	background: $grey;
 }
@@ -623,7 +715,6 @@ section.team {
 	background-repeat: no-repeat;
 	position: relative;
 }
-
 
 .work-buttons {
 	position: absolute;
@@ -649,15 +740,12 @@ section.team {
 	}
 }
 
-
 .button-explore button:hover {
 		opacity: 0.9;
 		background: rgba(255,255,255,0.5);
 		font-weight: 900;
 		border: 1px solid $grey;
 	}
-
-
 
 .button-contact button:hover {
 		background: $red;
@@ -776,6 +864,12 @@ section.team {
 	}
 }
 
+
+
+//<---------- STATS ---------->//
+
+
+
 .stats {
 	background-image: url('../assets/stat_bg.jpg');
 	text-align: center;
@@ -807,6 +901,12 @@ section.team {
 .stat img {
 	width: 80px;
 }
+
+
+
+//<---------- PRICING ---------->//
+
+
 
 .pricing {
 	background: $grey;
@@ -922,6 +1022,12 @@ section.team {
 	}
 }
 
+
+
+//<---------- BLOG ---------->//
+
+
+
 .blog {
 	background-image: url('../assets/blog-bg.png');
 	text-align: center;
@@ -1028,6 +1134,12 @@ section.team {
 	}
 }
 
+
+
+//<---------- MAP ---------->//
+
+
+
 .map {
 	padding: 0 0;
 	margin: 0 auto;
@@ -1036,6 +1148,12 @@ section.team {
 .scrolloff { //disable Google map scroll
         pointer-events: none;
 }
+
+
+
+//<---------- CONTACT ---------->//
+
+
 
 .contact {
 	margin-bottom: 50px;
@@ -1148,6 +1266,12 @@ section.team {
 	}
 }
 
+
+
+//<---------- QUOTE ---------->//
+
+
+
 .quote .container {
 	display: flex;
 }
@@ -1190,6 +1314,27 @@ section.team {
 		// opacity: 0.5;
 	}
 }
+
+@media (max-width: 630px) {
+	.quote {
+		height: 150px;
+		padding: 0px;
+
+		h3 {
+			display: none;
+		}
+
+		button {
+			margin: 50px auto;
+		}
+	}
+}
+
+
+
+//<---------- FOOTER ---------->//
+
+
 
 footer {
 	padding: 50px 0;
@@ -1308,18 +1453,6 @@ footer .container {
 }
 
 @media (max-width: 630px) {
-	.quote {
-		height: 150px;
-		padding: 0px;
-
-		h3 {
-			display: none;
-		}
-
-		button {
-			margin: 50px auto;
-		}
-	}
 
 	footer {
 		height: 150px;

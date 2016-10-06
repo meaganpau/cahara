@@ -178,6 +178,68 @@ body {
   overflow-x: hidden;
 }
 
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: 'Georgia';
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+hr {
+  width: 100px;
+  border: 1px solid #FF503F;
+  margin-bottom: 50px;
+}
+
+section {
+  padding: 50px 0;
+  position: relative;
+  z-index: -5;
+}
+
+nav ul, .top-nav ul, .side-menu ul, .team ul, .pricing-features ul, .footer-social ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.title {
+  text-align: center;
+  color: #445158;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  font-family: "Lato", sans-serif;
+}
+
 header {
   width: 100%;
   height: 70vh;
@@ -216,62 +278,9 @@ header .container {
   height: 7px;
 }
 
-h1, h2, h3, h4, p {
-  margin: 0;
-  padding: 0;
-}
-
-h2 {
-  font-family: 'Georgia';
-  font-style: italic;
-  font-weight: lighter;
-  font-size: 2.5rem;
-  letter-spacing: 1px;
-  line-height: 1.5;
-  margin: 20px 0;
-}
-
-h3 {
-  font-size: 1.5rem;
-  font-weight: 900;
-  letter-spacing: 1px;
-}
-
-a {
-  color: inherit;
-}
-
-.title {
-  text-align: center;
-  color: #445158;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  font-weight: 900;
-  letter-spacing: 1px;
-  margin-bottom: 50px;
-}
-
-.container {
-  width: 70%;
-  margin: 0 auto;
-  font-family: "Lato", sans-serif;
-}
-
-@media (max-width: 900px) {
-  .container {
-    width: 90%;
-  }
-}
-
 .top-nav {
   height: 100px;
   line-height: 100px;
-}
-
-nav ul, .top-nav ul, .side-menu ul, .team ul, .pricing-features ul, .footer-social ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
 }
 
 .top-nav ul {
@@ -385,36 +394,85 @@ nav {
   font-size: 0.5rem;
   font-weight: 900;
   letter-spacing: 0.1rem;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+
+.menu a:last-of-type {
+  margin-right: 0;
+}
+
+.menu a:first-of-type {
+  margin-left: 0;
 }
 
 .menu li {
   display: inline-block;
-  margin-right: 2%;
-  margin-left: 2%;
   opacity: 0.5;
   transition: 0.3s all ease;
-}
-
-.menu li:last-of-type {
-  margin-right: 0;
-}
-
-.menu li:first-of-type {
-  margin-left: 0;
 }
 
 .menu li:hover {
   opacity: 1;
 }
 
-a {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
-
 .logo img {
   height: 25px;
+}
+
+.top-nav2 {
+  height: 80px;
+  line-height: 45px;
+  position: fixed;
+  background: #445158;
+  width: 100%;
+  display: none;
+  opacity: 0.75;
+}
+
+.top-nav2 ul {
+  padding: 0;
+  list-style: none;
+  font-size: 2rem;
+  z-index: -1;
+}
+
+.top-nav2 ul li, .logo img {
+  vertical-align: middle;
+}
+
+.top-nav2 ul li:first-of-type {
+  float: left;
+  margin-left: 5%;
+}
+
+.top-nav2 ul li:last-of-type {
+  float: right;
+  margin-right: 5%;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 573px) {
+  nav {
+    height: 0px;
+  }
+  .menu {
+    display: none;
+  }
+  nav .logo img {
+    display: none;
+  }
+  .header-text {
+    margin-top: 50px;
+  }
+  .top-nav2 {
+    display: initial;
+  }
 }
 
 .side {
@@ -493,30 +551,19 @@ input[type="checkbox"] {
 }
 
 .sidebar-toggle {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   opacity: 0.5;
   position: absolute;
-  right: 10%;
-  top: 20px;
+  left: 10%;
+  top: 10px;
+  padding: 10px;
 }
 
 @media (max-width: 573px) {
-  nav {
-    height: 0px;
-  }
-  .menu {
-    display: none;
-  }
-  nav.logo {
-    display: none;
-  }
   .side {
     height: 100vh;
     z-index: 10;
     position: fixed;
-  }
-  .header-text {
-    margin-top: 50px;
   }
 }
 
@@ -530,17 +577,6 @@ input[type="checkbox"] {
   position: absolute;
   top: 0;
   right: 25px;
-}
-
-hr {
-  width: 100px;
-  border: 1px solid #FF503F;
-  margin-bottom: 50px;
-}
-
-section {
-  padding: 50px 0;
-  position: relative;
 }
 
 .intro-quote {
@@ -755,6 +791,12 @@ section.team {
 
 #owl-blog .owl-dot.active span {
   background: #EAEFF3;
+}
+
+@media (max-width: 573px) {
+  #owl-sponsor .item img {
+    width: 30%;
+  }
 }
 
 .work {
@@ -1320,6 +1362,19 @@ section.team {
   background: rgba(255, 255, 255, 0.2);
 }
 
+@media (max-width: 630px) {
+  .quote {
+    height: 150px;
+    padding: 0px;
+  }
+  .quote h3 {
+    display: none;
+  }
+  .quote button {
+    margin: 50px auto;
+  }
+}
+
 footer {
   padding: 50px 0;
   background: #22272A;
@@ -1434,16 +1489,6 @@ footer .container {
 }
 
 @media (max-width: 630px) {
-  .quote {
-    height: 150px;
-    padding: 0px;
-  }
-  .quote h3 {
-    display: none;
-  }
-  .quote button {
-    margin: 50px auto;
-  }
   footer {
     height: 150px;
   }
