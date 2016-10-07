@@ -84,11 +84,11 @@ $(document).ready(function(){
   var topOfOthDiv = $("#about").offset().top;
   if ($(window).width() < 573){
     if($(window).scrollTop() > topOfOthDiv) { //scrolled past the other div?
-            $(".top-nav2").fadeIn(200); //reached the desired point -- show div
+            $(".top-nav2").slideDown(500); //reached the desired point -- show div
         }
 
     if($(window).scrollTop() <= topOfOthDiv) { //scrolled past the other div?
-            $(".top-nav2").fadeOut(200); //reached the desired point -- show div
+            $(".top-nav2").slideUp(500); //reached the desired point -- show div
         }
   } else {
     $(".top-nav2").hide();
