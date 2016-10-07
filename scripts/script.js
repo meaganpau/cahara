@@ -80,26 +80,26 @@ $(document).ready(function(){
   });
 
 
-function resize() {
-  if ($(window).width() < 573){  
-    var topOfOthDiv = $("#about").offset().top;
-    $(window).scroll(function() {
-        if($(window).scrollTop() > topOfOthDiv) { //scrolled past the other div?
+ function display() {
+  var topOfOthDiv = $("#about").offset().top;
+  if ($(window).width() < 573){
+    if($(window).scrollTop() > topOfOthDiv) { //scrolled past the other div?
             $(".top-nav2").fadeIn(200); //reached the desired point -- show div
         }
 
-    });
-
-    $(window).scroll(function() {
-        if($(window).scrollTop() < topOfOthDiv) { //scrolled past the other div?
+    if($(window).scrollTop() <= topOfOthDiv) { //scrolled past the other div?
             $(".top-nav2").fadeOut(200); //reached the desired point -- show div
         }
-
-    });
-  } 
+  } else {
+    $(".top-nav2").hide();
+  }
 }
 $(window).resize(function() {
-  resize();
+  display();
 })
-resize();
+$(window).scroll(function() {
+  display();
+})
+
+display();
 });
